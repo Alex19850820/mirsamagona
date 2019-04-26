@@ -35,7 +35,7 @@ class ControllerCommonHeader extends Controller {
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');
 
-		$data['name'] = $this->config->get('config_name');
+		$data['name_logo'] = $this->config->get('config_name');
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 			$data['logo'] = $server . 'image/' . $this->config->get('config_logo');
@@ -87,7 +87,11 @@ class ControllerCommonHeader extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
-
+		
+		/*my*/
+		$data['address'] = nl2br($this->config->get('config_address'));
+		/*end*/
+		
 		// Menu
 		$this->load->model('catalog/category');
 
@@ -149,6 +153,66 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
+		
+		/*feedback*/
+		$this->load->language('extension/module/feedback');
+		
+		if (isset($this->config->get('feedback_title')[$this->config->get('config_language_id')])) {
+			$data['heading_title'] = html_entity_decode($this->config->get('feedback_title')[$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8');
+		} else {
+			$data['heading_title'] = '';
+		}
+		
+		if (isset($this->config->get('feedback_main')[$this->config->get('config_language_id')])) {
+			$data['text_main'] = html_entity_decode($this->config->get('feedback_main')[$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8');
+		} else {
+			$data['text_main'] = '';
+		}
+		
+		if (!empty($this->config->get('feedback_email'))) {
+			$data['email_active'] = $this->config->get('feedback_email');
+		} else {
+			$data['email_active'] = '';
+		}
+		
+		$data['entry_name']             = $this->language->get('entry_name');
+		$data['entry_phone']            = $this->language->get('entry_phone');
+		$data['entry_email']            = $this->language->get('entry_email');
+		$data['entry_enquiry']          = $this->language->get('entry_enquiry');
+		
+		$data['text_button']            = $this->language->get('text_button');
+		$data['text_button_callback']   = $this->language->get('text_button_callback');
+		$data['text_send']              = $this->language->get('text_send');
+		$data['text_loading']           = $this->language->get('text_loading');
+		
+		$data['email_subject']          = $this->language->get('email_subject');
+		$data['email_subject_callback'] = $this->language->get('email_subject_callback');
+		
+		// Captcha
+		if (!$this->customer->isLogged() && $this->config->get($this->config->get('config_captcha') . '_status') && in_array('feedback', (array)$this->config->get('config_captcha_page'))) {
+			$data['captcha'] = $this->load->controller('extension/captcha/' . $this->config->get('config_captcha'));
+		} else {
+			$data['captcha'] = '';
+		}
+		
+		if ($this->customer->isLogged()) {
+			$data['name'] = $this->customer->getFirstName() . '&nbsp;' . $this->customer->getLastName();
+		} else {
+			$data['name'] = '';
+		}
+		
+		if ($this->customer->isLogged()) {
+			$data['phone'] = $this->customer->getTelephone();
+		} else {
+			$data['phone'] = '';
+		}
+		
+		if (!empty($this->config->get('feedback_email')) && $this->customer->isLogged()) {
+			$data['email'] = $this->customer->getEmail();
+		} else {
+			$data['email'] = '';
+		}
+		/*end*/
 
 		return $this->load->view('common/header', $data);
 	}

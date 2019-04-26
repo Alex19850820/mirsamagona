@@ -19,7 +19,18 @@ class ControllerCommonFooter extends Controller {
 		$data['text_order'] = $this->language->get('text_order');
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
-
+		
+		/*my*/
+		$data['address'] = nl2br($this->config->get('config_address'));
+		$data['my_email'] = $this->config->get('config_email');
+		$data['open'] = nl2br($this->config->get('config_open'));
+		$this->document->addScript('catalog/view/javascript/phone.js');
+		$this->document->addScript('catalog/view/javascript/jquery.inputmask.bundle.js');
+		$this->document->addScript('catalog/view/javascript/script_form.js');
+		
+		/*end*/
+		
+		
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();
