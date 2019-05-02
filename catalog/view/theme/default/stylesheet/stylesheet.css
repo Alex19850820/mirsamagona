@@ -311,6 +311,11 @@ div.required .control-label:before {
 		border-radius: 0;
 		color: #fff;
 	}
+	/*my*/
+	#search {
+		width: 100%;
+	}
+	/*end*/
 }
 /* content */
 #content {
