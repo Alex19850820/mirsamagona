@@ -11,6 +11,7 @@ themes/classic/views/
 /config.php
 admin/config.php
 bd-distr
+image
 
 
 !index.html
