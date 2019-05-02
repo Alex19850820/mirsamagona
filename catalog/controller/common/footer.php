@@ -28,6 +28,7 @@ class ControllerCommonFooter extends Controller {
 		$this->document->addScript('catalog/view/javascript/jquery.inputmask.bundle.js');
 		$this->document->addScript('catalog/view/javascript/script_form.js');
 		$data['telephone'] = $this->config->get('config_telephone');
+		$data['phone_link'] = preg_replace("/[^,.0-9]/", '', $this->config->get('config_telephone'));
 		
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
 			$server = $this->config->get('config_ssl');
