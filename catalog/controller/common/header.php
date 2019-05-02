@@ -90,6 +90,7 @@ class ControllerCommonHeader extends Controller {
 		
 		/*my*/
 		$data['address'] = nl2br($this->config->get('config_address'));
+		$data['phone_link'] = preg_replace("/[^,.0-9]/", '', $this->config->get('config_telephone'));
 		/*end*/
 		
 		// Menu
