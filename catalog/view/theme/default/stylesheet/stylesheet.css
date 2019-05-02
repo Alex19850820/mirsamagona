@@ -847,3 +847,16 @@ h2.price {
 .head-phone > li {
 	list-style: none;
 }
+.footer-item {
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	margin-right: 30px !important;
+}
+.menu-footer {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	overflow: auto;
+}
