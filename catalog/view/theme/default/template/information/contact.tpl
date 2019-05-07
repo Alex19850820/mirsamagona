@@ -100,7 +100,7 @@
         <?php } ?>
       </div>
       <?php } ?>
-	    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acc6e231bac17e4fce28588eb6c664fe24a4f04b10095ee5e759ab904534dc18f&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=true"></script>
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A16acfcced933940eef54ae3517415970e6687127dcff04669ba161a9ea38481c&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=true"></script>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <legend><?php echo $text_contact; ?></legend>
