@@ -30,6 +30,7 @@ class ControllerCommonFooter extends Controller {
 		$data['telephone'] = $this->config->get('config_telephone');
 		$data['phone_link'] = preg_replace("/[^,.0-9]/", '', $this->config->get('config_telephone'));
 		$data['home'] = $this->url->link('common/home');
+		$data['og_url'] = (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1')) ? HTTPS_SERVER : HTTP_SERVER) . substr($this->request->server['REQUEST_URI'], 1, (strlen($this->request->server['REQUEST_URI'])-1));
 		
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
 			$server = $this->config->get('config_ssl');
