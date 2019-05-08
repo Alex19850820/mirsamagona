@@ -26,11 +26,11 @@
   <meta property="og:image" content="<?php echo $logo; ?>" />
   <?php } ?>
   <meta property="og:site_name" content="<?php echo $name; ?>" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
   <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
   <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" ></script>
   <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
   <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
   <?php foreach ($styles as $style) { ?>
