@@ -5,7 +5,8 @@
 	padding: 3px 12px;
 }
 .list-group a.child{
-    padding: 3px 12px;
+    /*padding: 3px 12px;*/
+    padding: 3px 0;
     line-height: 30px;
 }
 .list-group .cat-name{
