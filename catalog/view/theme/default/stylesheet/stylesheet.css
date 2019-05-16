@@ -132,7 +132,7 @@ div.required .control-label:before {
 }
 /* logo */
 #logo {
-	margin: 0 0 10px 0;
+	margin: -25px 0 10px 0;
 }
 /* search */
 #search {
@@ -818,6 +818,7 @@ h2.price {
 }
 #logo {
 	text-align: center;
+	height: 80px;
 }
 .block_with_feedback {
 	text-align: center;
