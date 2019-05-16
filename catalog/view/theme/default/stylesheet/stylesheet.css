@@ -132,6 +132,9 @@ div.required .control-label:before {
 }
 /* logo */
 #logo {
+	margin: 0 0 10px 0;
+}
+#logo-footer {
 	margin: -25px 0 10px 0;
 }
 /* search */
@@ -817,6 +820,10 @@ h2.price {
 	width: 150px;
 }
 #logo {
+	text-align: center;
+	height: 80px;
+}
+#logo-footer {
 	text-align: center;
 	height: 80px;
 }

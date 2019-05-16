@@ -51,7 +51,7 @@
     <hr>
     <div class="row" >
       <div class="col-sm-4">
-        <div id="logo">
+        <div id="logo-footer">
           <?php if ($logo) { ?>
           <?php if ($home == $og_url) { ?>
           <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
