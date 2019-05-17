@@ -62,7 +62,7 @@ class ControllerExtensionModuleFeatured extends Controller {
 					$data['products'][] = array(
 						'product_id'  => $product_info['product_id'],
 						'thumb'       => $image,
-						'name'        => utf8_substr($product_info['name'], 0, 30). '..',
+						'name'        => utf8_substr($product_info['name'], 0, 70). '..',
 						'description' => utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, 70) . '..',
 						'price'       => $price,
 						'special'     => $special,
