@@ -862,7 +862,8 @@ h2.price {
 	margin-right: 30px !important;
 }
 .menu-footer {
-	display: flex;
+	/*display: flex;*/
+	display: inline-block;
 	align-items: center;
 	align-content: center;
 	justify-content: center;
