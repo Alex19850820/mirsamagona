@@ -372,6 +372,16 @@ class ControllerProductCategory extends Controller {
 			    $this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'] . '&page='. ($page + 1), true), 'next');
 			}
 
+			/*my*/
+			//301 from page=1
+			if(isset($this->request->get['page']) && $this->request->get['page'] == 1){
+				header('Location: ' . $this->url->link('product/category', 'path=' . $category_info['category_id'], true), true, 301);
+				exit();
+			}
+//301 from page=1
+			/*end*/
+			
+			
 			$data['sort'] = $sort;
 			$data['order'] = $order;
 			$data['limit'] = $limit;
