@@ -281,7 +281,7 @@ margin-bottom: 0;"><?php echo $heading_title; ?></h3>
 
 	});
 </script>
-<!--end-pagination-->
+<!--end pagination-->
 
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
