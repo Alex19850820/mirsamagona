@@ -167,7 +167,7 @@ margin-bottom: 0;"><?php echo $heading_title; ?></h3>
 		var autoscroller = [];
 		//setting
 		autoscroller.hidePagination = 1;
-		autoscroller.autoScroll = 1;
+		autoscroller.autoScroll = 0;
 		autoscroller.catcher = '#endless';
 		autoscroller.delay = 1000;
 		//setting
@@ -255,8 +255,7 @@ margin-bottom: 0;"><?php echo $heading_title; ?></h3>
 								$('#endless .fa-refresh').removeClass('fa-spin');
 							}
 
-							// autoscroller.loading = 0;
-							autoscroller.autoScroll = 0;
+							autoscroller.loading = 0;
 						}
 					});
 
