@@ -92,11 +92,7 @@ class ControllerProductCategory extends Controller {
 		if ($category_info) {
 
 			if ($category_info['meta_title']) {
-//				$this->document->setTitle($category_info['meta_title']);
-				/*my new*/
-				if ($page > 1) { $this->document->setTitle($category_info['meta_title'] . ' - Страница: ' . $page); }else{ $this->document->setTitle($category_info['meta_title']); }
-				/*end*/
-				
+				$this->document->setTitle($category_info['meta_title']);
 			} else {
 				$this->document->setTitle($category_info['name']);
 			}
