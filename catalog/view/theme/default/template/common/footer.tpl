@@ -255,7 +255,8 @@ margin-bottom: 0;"><?php echo $heading_title; ?></h3>
 								$('#endless .fa-refresh').removeClass('fa-spin');
 							}
 
-							autoscroller.loading = 0;
+							// autoscroller.loading = 0;
+							autoscroller.autoScroll = 0;
 						}
 					});
 
