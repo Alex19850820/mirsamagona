@@ -21,11 +21,11 @@ image/data/
 image/cache/
 system/cache/
 system/logs/
-image/catalog/beer/
-image/catalog/drozhi/
-image/catalog/food/
-image/catalog/sam/
-image/catalog/vino/
+image/catalog/beer
+image/catalog/drozhi
+image/catalog/food
+image/catalog/sam
+image/catalog/vino
 
 system/storage/
 
